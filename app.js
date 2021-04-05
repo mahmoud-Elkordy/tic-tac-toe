@@ -152,6 +152,9 @@ function draw(){
 function replay(winOrDraw){
   $("body").addClass('style');
   $("button").css('visibility','visible');
+  $("div").off('click mouseenter');
+  // $("div").off('mouseenter');
+
   if (winOrDraw===1) {
     $(".container").prepend("<h1 class=winner-text>X`s WINS!!!</h1>");
   }else if(winOrDraw===0){
