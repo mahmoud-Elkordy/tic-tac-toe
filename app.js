@@ -2,8 +2,7 @@
 let flag = true;
 let x = $('body').hasClass('style');
 
-if (!x) {
-  $(".col").mouseenter(function() {
+$(".col").mouseenter(function() {
     if (flag === true) {
       $(this).addClass("add-x-image");
     } else {
@@ -11,7 +10,7 @@ if (!x) {
     }
   });
 
-  $(".col").mouseleave(function() {
+$(".col").mouseleave(function() {
     if (flag === true) {
       $(this).removeClass("add-x-image");
     } else {
@@ -19,7 +18,7 @@ if (!x) {
     }
   });
 
-  $(".col").click(function() {
+$(".col").click(function() {
     if (flag === true) {
       if ($(this).hasClass('x-image') || $(this).hasClass('o-image')) {
         // do nothing
@@ -40,10 +39,9 @@ if (!x) {
       }
     }
   });
-}
 
-$("button").click(function(){
-
+$("button").click(function () {
+  location.reload(true);
 });
 
 function xWins(){
@@ -153,7 +151,7 @@ function draw(){
 
 function replay(winOrDraw){
   $("body").addClass('style');
-  $(".container").append("<button class='btn btn-lg btn-light btn-outline-dark'>Restart</button>");
+  $("button").css('visibility','visible');
   if (winOrDraw===1) {
     $(".container").prepend("<h1 class=winner-text>X`s WINS!!!</h1>");
   }else if(winOrDraw===0){

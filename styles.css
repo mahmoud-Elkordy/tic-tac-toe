@@ -68,6 +68,7 @@ body{
   right: 44.3rem;
   bottom: 20rem;
   font-size: 30px;
+  visibility: hidden;
 }
 
 .style{
