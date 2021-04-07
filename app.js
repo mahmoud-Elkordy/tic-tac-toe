@@ -25,7 +25,6 @@ $(".col").click(function() {
       } else {
         $(this).addClass('x-image').removeClass('add-x-image');
         xWins();
-        draw();
         flag = false;
       }
     } else {
@@ -34,7 +33,6 @@ $(".col").click(function() {
       } else {
         $(this).addClass('o-image').removeClass('add-o-image');
         oWins();
-        draw();
         flag = true;
       }
     }
@@ -80,6 +78,8 @@ function xWins(){
   }else if( div3X && div5X && div7X ) {
     winOrDraw =1;
     replay(winOrDraw);
+  }else {
+    draw();
   }
 }
 
@@ -119,6 +119,8 @@ function oWins(){
   }else if( div3O && div5O && div7O ) {
     winOrDraw = 0;
     replay(winOrDraw);
+  }else {
+    draw();
   }
 }
 

@@ -56,8 +56,8 @@ body{
 .winner-text{
   color: #fff;
   font-size: 6rem;
-  width: 50%;
   position: absolute;
+  width: 50%;
   text-align: center;
   left: 24rem;
   top: 13rem;
